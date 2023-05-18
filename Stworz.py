@@ -5,7 +5,7 @@ InventoryList=[]
 AnswerList={'Tak', 'tak', 'Nie', 'nie'}
 pola = ['Dane użytkownika', 'PC', 'iPad SN', 'Phone SN']
 
-dirname = 'example C:\\Users\\xx\\xx\\xx\\xx\\xx'
+dirname = 'C:\\Users\\kisie\\Documents\\Scrypts\\Baza\\Output'
 filename = input(' Wprowadź nazwe dla swojego swojego pliku ')
 filepath = os.path.join(dirname,filename)
 Output = (filepath + '.csv')
@@ -45,6 +45,8 @@ def SaveOperation():
         input('Wcisnij enter by zamknac program')
 summary()        
 check=input('Czy dane są poprawne? ')
+if check == "tak" or check == "Tak":
+    SaveOperation()
 while check == "nie" or check == "Nie":
     print('Ktora kolumne chcesz edytować?')
     edit = input('1,2,3,4? ')
@@ -80,4 +82,4 @@ while check == "nie" or check == "Nie":
         if check == "tak" or check == "Tak":
             SaveOperation()
             break
-SaveOperation()
+
